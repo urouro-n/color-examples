@@ -2,20 +2,15 @@ import React, { Component } from 'react';
 import {
   AppRegistry,
   StyleSheet,
-  Text,
   View
 } from 'react-native';
+import { ColorInfo } from './app/components/ColorInfo';
 
 class Web extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Hello, react-native-web!
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload
-        </Text>
+        <ColorInfo hex={'#ff0000'} />
       </View>
     );
   }
@@ -23,21 +18,11 @@ class Web extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    backgroundColor: 'white',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
+    margin: '64px'
+  }
 });
 
 AppRegistry.registerComponent('Web', () => Web);
