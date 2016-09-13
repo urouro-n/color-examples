@@ -1,0 +1,31 @@
+{
+  "name": "color-examples",
+  "version": "0.0.1",
+  "scripts": {
+    "serve": "webpack-dev-server --config web/webpack.config.js --inline"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/urouro-n/color-examples.git"
+  },
+  "author": "Kenta Nakai <kenta.nakai@urouro.net> (http://urouro.net)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/urouro-n/color-examples/issues"
+  },
+  "homepage": "https://github.com/urouro-n/color-examples#readme",
+  "dependencies": {
+    "babel-core": "^6.14.0",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.14.0",
+    "babel-preset-react": "^6.11.1",
+    "react": "^15.3.1",
+    "react-dom": "^15.3.1",
+    "react-native": "^0.33.0",
+    "react-native-web": "0.0.45",
+    "webpack": "^1.13.2"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^1.15.1"
+  }
+}
