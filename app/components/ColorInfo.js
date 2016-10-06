@@ -16,10 +16,24 @@ export class ColorInfo extends Component {
   render() {
     var hex = this.props.hex;
 
+    var regexpResult = /^#?([\da-f]{2})([\da-f]{2})([\da-f]{2})$/i.exec(hex);
+    if (!regexpResult) {
+      return (
+        <View style={styles.container}>
+          Error
+        </View>
+      );
+    }
+
+    var red = parseInt(regexpResult[1], 16);
+    var green = parseInt(regexpResult[2], 16);
+    var blue = parseInt(regexpResult[3], 16);
+
+    var rgb = 'rgb(' + red + ', ' + green + ', ' + blue + ')';
+
     // TODO:
-    var rgb = 'rgb(255, 0, 0)';
-    var swift = 'UIColor(red: 1.0, green: 0.0, blue: 0.0, alpha: 1.0)';
-    var objc = '[UIColor colorWithRed:0.85f green:0.85f blue:0.86f alpha:1.0f]';
+    var swift = 'UIColor(red: ' + (red/255.0) + ', green: ' + (green/255.0) + ', blue: ' + (blue/255.0) + ', alpha: 1.0)';
+    var objc = '[UIColor colorWithRed:' + (red/255.0) + 'f green:' + (green/255.0) + 'f blue:' + (blue/255.0) + 'f alpha:1.0f]';
 
     var codeBlocksStyle = {
       width: '100%'

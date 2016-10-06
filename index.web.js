@@ -10,7 +10,7 @@ class Web extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <ColorInfo hex={'#ff0000'} />
+        <ColorInfo hex={'#ff7900'} />
       </View>
     );
   }
