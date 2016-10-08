@@ -2,6 +2,7 @@
   "name": "color-examples",
   "version": "0.0.1",
   "scripts": {
+    "build": "webpack --config web/webpack.config.js; mv bundle.js build/bundle.js; cp web/src/index.html build/index.html",
     "serve": "webpack-dev-server --config web/webpack.config.js --inline"
   },
   "repository": {
