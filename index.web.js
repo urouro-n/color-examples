@@ -8,9 +8,17 @@ import { ColorInfo } from './app/components/ColorInfo';
 
 class Web extends Component {
   render() {
+    var hex = '#000000';
+    var regexp = /^#([a-f0-9]{6})$/;
+    var matches = window.location.hash.match(regexp);
+
+    if (matches) {
+      hex = '#' + matches[1];
+    }
+
     return (
       <View style={styles.container}>
-        <ColorInfo hex={'#ff7900'} />
+        <ColorInfo hex={hex} />
       </View>
     );
   }
